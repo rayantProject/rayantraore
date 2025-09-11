@@ -1,4 +1,5 @@
 # Build outputs
+
 **/.next/**
 **/node_modules/**
 **/dist/**
@@ -6,4 +7,5 @@
 **/.vercel/**
 
 # Generated files
+
 yarn.lock
