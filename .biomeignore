@@ -1,0 +1,9 @@
+# Build outputs
+**/.next/**
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.vercel/**
+
+# Generated files
+yarn.lock
