@@ -7,7 +7,7 @@ pre-commit:
       stage_fixed: true
     
     biome-format:
-      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,md,yml,yaml}"
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,md}"
       run: yarn biome format --write {staged_files}
       stage_fixed: true
     
