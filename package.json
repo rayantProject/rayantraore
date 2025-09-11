@@ -1,4 +1,22 @@
 {
   "name": "rayantaore",
-  "packageManager": "yarn@4.9.4"
+  "packageManager": "yarn@4.9.4",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "conventional-changelog-atom": "^5.0.0",
+    "lefthook": "^1.12.4"
+  },
+  "scripts": {
+    "dev:client": "yarn workspace @rayantaore/client dev",
+    "build:client": "yarn workspace @rayantaore/client build",
+    "start:client": "yarn workspace @rayantaore/client start",
+    "lint": "biome check",
+    "format": "biome format --write"
+  }
 }

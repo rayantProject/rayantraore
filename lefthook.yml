@@ -1,0 +1,30 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome-check:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc}"
+      run: yarn biome check --write {staged_files}
+      stage_fixed: true
+    
+    biome-format:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc,css,md,yml,yaml}"
+      run: yarn biome format --write {staged_files}
+      stage_fixed: true
+    
+    no-console:
+      glob: "apps/client/**/*.{ts,tsx}"
+      run: |
+        if grep -r "console\." {staged_files}; then
+          echo "❌ Console statements found in staged files. Please remove them."
+          exit 1
+        fi
+
+commit-msg:
+  commands:
+    commitlint:
+      run: yarn commitlint --edit {1}
+
+pre-push:
+  commands:
+    lint-all:
+      run: yarn biome check
