@@ -44,30 +44,6 @@
     "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.next": true,
-    "**/dist": true,
-    "**/build": true,
-    "**/.turbo": true,
-    "**/coverage": true
-  },
-  "files.watcherExclude": {
-    "**/node_modules/**": true,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
-    "**/.next/**": true,
-    "**/dist/**": true,
-    "**/build/**": true,
-    "**/.turbo/**": true
-  },
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
