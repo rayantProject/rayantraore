@@ -49,23 +49,12 @@ export default function Header() {
                 Contact
               </Link>
             </li>
-
-            <li>
-              <Link
-                href="/blog"
-                className="text-foreground hover:text-primary transition-colors duration-200"
-              >
-                Blog
-              </Link>
-            </li>
           </ul>
         </nav>
 
-        {/* Right side - Theme toggle and Mobile menu button */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
 
-          {/* Mobile Menu Button */}
           <button
             type="button"
             onClick={toggleMenu}
@@ -91,7 +80,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMenuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
