@@ -13,6 +13,7 @@
     "lefthook": "^1.12.4"
   },
   "scripts": {
+    "storybook": "yarn workspace @rayantaore/client storybook",
     "dev:client": "yarn workspace @rayantaore/client dev",
     "build:client": "yarn workspace @rayantaore/client build",
     "start:client": "yarn workspace @rayantaore/client start",
