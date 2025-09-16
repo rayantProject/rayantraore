@@ -45,44 +45,57 @@
 
 :root {
   --radius: 0.625rem;
-  /* Couleurs de base avec votre palette */
-  --background: oklch(
-    0.75 0.02 250
-  ); /* #AEB8C4 - Gris clair bleuté pour le fond */
-  --foreground: oklch(
-    0.17 0.03 230
-  ); /* #05263B - Bleu très foncé pour le texte */
-  --card: oklch(0.72 0.02 250); /* Légèrement plus foncé que le background */
-  --card-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --popover: oklch(0.75 0.02 250); /* #AEB8C4 */
-  --popover-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --primary: oklch(0.25 0.03 230); /* #163B50 - Bleu foncé */
-  --primary-foreground: oklch(0.75 0.02 250); /* #AEB8C4 - Contraste clair */
-  --secondary: oklch(0.67 0.02 245); /* #9CA6B8 - Gris moyen bleuté */
-  --secondary-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --muted: oklch(0.67 0.02 245); /* #9CA6B8 */
-  --muted-foreground: oklch(0.25 0.03 230); /* #163B50 */
-  --accent: oklch(0.67 0.02 245); /* #9CA6B8 */
-  --accent-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --destructive: oklch(
-    0.577 0.245 27.325
-  ); /* Garde la couleur destructive rouge */
-  --border: oklch(0.67 0.02 245); /* #9CA6B8 pour les bordures */
-  --input: oklch(0.7 0.02 248); /* Légèrement plus clair pour les inputs */
-  --ring: oklch(0.25 0.03 230); /* #163B50 pour le focus ring */
-  --chart-1: oklch(0.25 0.03 230); /* #163B50 */
-  --chart-2: oklch(0.67 0.02 245); /* #9CA6B8 */
-  --chart-3: oklch(0.75 0.02 250); /* #AEB8C4 */
-  --chart-4: oklch(0.17 0.03 230); /* #05263B */
-  --chart-5: oklch(0.46 0.025 240); /* Variation intermédiaire */
-  --sidebar: oklch(0.72 0.02 248); /* Légèrement différent du background */
-  --sidebar-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --sidebar-primary: oklch(0.25 0.03 230); /* #163B50 */
-  --sidebar-primary-foreground: oklch(0.75 0.02 250); /* #AEB8C4 */
-  --sidebar-accent: oklch(0.67 0.02 245); /* #9CA6B8 */
-  --sidebar-accent-foreground: oklch(0.17 0.03 230); /* #05263B */
-  --sidebar-border: oklch(0.67 0.02 245); /* #9CA6B8 */
-  --sidebar-ring: oklch(0.25 0.03 230); /* #163B50 */
+
+  /* Fond plus lumineux, moins terne */
+  --background: oklch(0.95 0.01 250); /* #F1F3F5 - gris très clair bleuté */
+  --foreground: oklch(0.2 0.03 230); /* #05263B - texte foncé */
+
+  /* Cartes détachées du background */
+  --card: oklch(0.98 0.005 250); /* Presque blanc mais légèrement bleuté */
+  --card-foreground: var(--foreground);
+
+  /* Popover = identique aux cartes */
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  /* Primary plus saturé pour contraster */
+  --primary: oklch(0.45 0.07 230); /* Bleu moyen accentué */
+  --primary-foreground: oklch(0.98 0.005 250); /* Blanc cassé */
+
+  /* Secondary, Muted, Accent = plus différenciés */
+  --secondary: oklch(0.85 0.02 245); /* Gris clair bleuté */
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.88 0.015 245); /* Encore plus clair pour fond secondaire */
+  --muted-foreground: oklch(0.4 0.04 230); /* Bleu-gris moyen pour contraste */
+
+  --accent: oklch(0.92 0.02 245); /* Presque blanc mais bleuté */
+  --accent-foreground: var(--foreground);
+
+  /* Destructive = garde ton rouge vif */
+  --destructive: oklch(0.57 0.25 27.3);
+
+  /* Bordures et inputs plus subtiles */
+  --border: oklch(0.85 0.02 245);
+  --input: oklch(0.92 0.015 248);
+  --ring: var(--primary);
+
+  /* Charts (progressions visuelles) */
+  --chart-1: var(--primary);
+  --chart-2: oklch(0.7 0.03 240); /* Bleu clair */
+  --chart-3: oklch(0.55 0.04 240); /* Bleu moyen clair */
+  --chart-4: oklch(0.35 0.05 230); /* Bleu foncé */
+  --chart-5: oklch(0.25 0.03 230); /* Presque noir bleuté */
+
+  /* Sidebar plus claire que le fond */
+  --sidebar: oklch(0.9 0.015 245);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 .dark {
