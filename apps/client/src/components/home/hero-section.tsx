@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Link from "next/link";
 import ShaderBackground from "@/components/system/shader-background";
 import { Button } from "../ui/button";
 
@@ -61,14 +62,18 @@ export default function HeroSection() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Button variant="outline">Projects</Button>
+              <Button variant="outline">
+                <Link href="/projects">Projects</Link>
+              </Button>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Button>Contact</Button>
+              <Button>
+                <Link href="/contact">Contact</Link>
+              </Button>
             </motion.div>
           </motion.div>
         </motion.div>
