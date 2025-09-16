@@ -21,13 +21,13 @@ export const networks: Network[] = [
     name: "Twitter",
     description: "Follow my thoughts and tech updates",
     icon: <Twitter />,
-    link: "https://twitter.com/rayantraore_",
+    link: "https://twitter.com/ray_azaman",
   },
   {
     id: "instagram",
     name: "Instagram",
     description: "Discover my creative side and daily moments",
     icon: <Instagram />,
-    link: "https://instagram.com/rayantraore_",
+    link: "https://instagram.com/ray_azaman",
   },
 ];
