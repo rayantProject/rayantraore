@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Bitcount_Grid_Double } from "next/font/google";
 import Link from "next/link";
+import { CONTACT_INFO } from "@/consts/contact";
 import { networks } from "@/consts/networks";
 import { cn } from "@/lib/utils";
 
@@ -55,7 +56,7 @@ export default function Footer() {
                   className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200 flex items-center justify-center group hover:scale-105 hover:-translate-y-1"
                   aria-label={`Visit my ${network.name} profile`}
                 >
-                  <span className="w-5 h-5 transition-transform group-hover:scale-110">
+                  <span className="w-5 h-5 transition-transform group-hover:scale-110 flex items-center justify-center">
                     {network.icon}
                   </span>
                 </a>
@@ -96,12 +97,12 @@ export default function Footer() {
             <div className="space-y-3 text-muted-foreground">
               <p>
                 <span className="block text-sm">Email</span>
-                <a
-                  href="mailto:contact@rayantraore.dev"
+                <Link
+                  href={CONTACT_INFO.email.href || "#"}
                   className="hover:text-primary transition-colors duration-200 hover:underline"
                 >
-                  contact@rayantraore.me
-                </a>
+                  {CONTACT_INFO.email.value}
+                </Link>
               </p>
               <p>
                 <span className="block text-sm">Location</span>
