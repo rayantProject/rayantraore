@@ -11,8 +11,8 @@ interface ContactItem {
 export const CONTACT_INFO: Record<string, ContactItem> = {
   email: {
     title: "Email",
-    value: "rayan.traore@gmail.com",
-    href: "mailto:rayan.traore@gmail.com",
+    value: "contact@rayantraore.me",
+    href: "mailto:contact@rayantraore.me",
     icon: Mail,
   },
   phone: {
